@@ -32,6 +32,8 @@ Frontend Mentor challenges help you improve your coding skills by building reali
 
 [Live Site URL](https://mendezpvi.github.io/fm-profile-card-component/) 👀
 
+[Solution in Frontend Mentor](https://www.frontendmentor.io/solutions/profile-card-component-nvv0YnrwU5) 👀
+
 [Challenge overcome](https://github.com/mendezpvi/frontend-mentor-challenges) 👀
 
 ## *Built with* :hammer_and_pick:
