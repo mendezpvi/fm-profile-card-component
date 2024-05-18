@@ -1,0 +1,127 @@
+body {
+  min-block-size: 100vh;
+  min-block-size: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ff-kumbh);
+  background: url('../assets/image/bg-pattern-top.svg') no-repeat bottom 36vh right 51.7vw, url('../assets/image/bg-pattern-bottom.svg') no-repeat top 52vh left 48vw var(--dark-cyan);
+  color: var(--very-dark-desaturated-blue)
+}
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --white: hsl(0, 0%, 100%);
+  --ff-kumbh: 'Kumbh';
+}
+
+.card {
+  margin-top: 2.9rem;
+  inline-size: clamp(20.375rem, 86.9vw, 21.875rem);
+  background-color: var(--white);
+  border-radius: 15px;
+  box-shadow: 0 3.125rem 6.25rem -1.25rem hsl(197, 84%, 20%, .5);
+  overflow: hidden;
+  text-align: center;
+}
+
+.card__pattern {
+  block-size: 8.75rem;
+  background: url('../assets/image/bg-pattern-card.svg') no-repeat center/cover;
+  position: relative; 
+}
+
+.card__avatar {
+  font-style: italic;
+  border: 5px solid var(--white);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.card__name,
+.stat__number {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.card__name {
+  margin-top: 4.5rem;
+}
+
+.card__age,
+.card__city,
+.stat__text {
+  font-weight: 400;
+  color: var(--dark-grayish-blue);
+}
+
+.card__age {
+  margin-left: .4rem;
+}
+
+.card__city {
+  margin-top: .5rem;
+  font-size: .875rem;
+}
+
+.stats {
+  margin-top: 1.5rem;
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top: 1px solid hsl(from var(--dark-gray) h s l / .3);
+}
+.stat__text {
+  display: block;
+  margin-top: .25rem;
+  font-size: .625rem;
+  letter-spacing: 1.5px;
+}
+
+.attribution {
+  padding-block: 1rem;
+  font-size: .85rem;
+  font-weight: 600;
+  text-align: center;
+}
+.attribution__cta {
+  margin-inline: .25rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+.attribution__cta::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -.15rem;
+  inline-size: 100%;
+  block-size: .12rem;
+  background-color: currentColor;
+  transform: scale(1);
+  transition: transform .3s ease;
+}
+
+.attribution__cta:focus-visible {
+  outline: .15rem dotted currentColor;
+  outline-offset: .15rem;
+}
+
+@media (hover:hover) {
+  .attribution__cta:hover::after {
+    transform: scale(0);
+  }
+}
+
+.attribution__cta:focus-visible::after {
+  transform: scale(0);
+}
